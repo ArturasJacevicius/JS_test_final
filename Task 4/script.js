@@ -17,7 +17,6 @@ const getCarsList = async () => {
     const response = await fetch(ENDPOINT);
     const data = await response.json();
     data.sort((a, b) => (a.brand > b.brand ? 1 : -1));
-    console.log(data);
 
     for (let i = 0; i < data.length; i++) {
       const carBrand = document.createElement("h2");
